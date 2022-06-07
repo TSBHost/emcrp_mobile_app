@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorLightblue">#85B6D8</color>
+    <color name="colorPrimary">#FFC107</color>
+    <color name="colorPrimaryDark">#F6C32B</color>
+    <color name="colorLightYellow">#F6D679</color>
+    <color name="colorAccent">#333333</color>
+    <color name="colorDeepBlue">#044f8e</color>
+    <color name="colorBlue">#0769ba</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorDefault">#e05f54</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorOrange">#FF7748</color>
+    <color name="colorDeepOrange">#FD6C21</color>
+    <color name="colorAsh">#F5F5F5</color>
+    <color name="colorDeepAsh">#EAEAEA</color>
+    <color name="colorCCC">#CCCCCC</color>
+    <color name="colorGrid">#92989B</color>
+    <color name="colorGridBorder">#696F71</color>
+    <color name="colorGridBorderG">#0E4410</color>
+    <color name="colorDeepAsh1">#757575</color>
+    <color name="colorNext">#0A650C</color>
+    <color name="colorPrev">#0A650C</color>
+    <color name="light_font">#FBFBFB</color>
+    <color name="grey_font">#ff9e9e9e</color>
+    <color name="text_shadow">#7F000000</color>
+    <color name="text_shadow_white">#FFFFFF</color>
+    <color name="color_yellow">#fff701</color>
+    <color name="color_yellowDeep">#948000</color>
+</resources>

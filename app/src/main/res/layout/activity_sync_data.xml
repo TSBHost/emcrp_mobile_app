@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="?attr/actionBarSize"
+    tools:context="app.ddc.lged.emcrp.SyncActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/border_bpttom"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:textSize="20sp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="Shelter Code:"/>
+            <Button
+                android:id="@+id/shelterbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sync Now"
+                android:layout_weight="0.2"
+                android:background="@color/colorNext"
+                android:textColor="@color/colorWhite"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/border_bpttom"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:textSize="20sp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="Submitted Form:"/>
+            <Button
+                android:id="@+id/submitform"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sync Now"
+                android:layout_weight="0.2"
+                android:background="@color/colorNext"
+                android:textColor="@color/colorWhite"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/border_bpttom"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:textSize="20sp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="Feedback:"/>
+            <Button
+                android:id="@+id/feedbackbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sync Now"
+                android:layout_weight="0.2"
+                android:background="@color/colorNext"
+                android:textColor="@color/colorWhite"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

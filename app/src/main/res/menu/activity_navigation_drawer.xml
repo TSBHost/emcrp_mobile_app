@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/about"
+            android:icon="@drawable/right_arrow"
+            android:title="About MDSP" />
+        <item
+            android:id="@+id/quality"
+            android:icon="@drawable/right_arrow"
+            android:title="Quality Management" />
+        <item
+            android:id="@+id/socialmanagement"
+            android:icon="@drawable/right_arrow"
+            android:title="Social Management" />
+        <item
+            android:id="@+id/envmanag"
+            android:icon="@drawable/right_arrow"
+            android:title="Environmental Management" />
+        <item
+            android:id="@+id/procurement"
+            android:icon="@drawable/right_arrow"
+            android:title="Procurement" />
+        <item
+            android:id="@+id/redresscomm"
+            android:icon="@drawable/right_arrow"
+            android:title="Grievance Redress Committe" />
+        <item
+            android:id="@+id/ictmonitoring"
+            android:icon="@drawable/right_arrow"
+            android:title="ICT Monitoring" />
+        <item
+            android:id="@+id/beniarea"
+            android:icon="@drawable/right_arrow"
+            android:title="Benifited Area" />
+        <item
+            android:id="@+id/gallery"
+            android:icon="@drawable/right_arrow"
+            android:title="Gallery" />
+        <item
+            android:id="@+id/resources"
+            android:icon="@drawable/right_arrow"
+            android:title="Resources" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+
+</menu>

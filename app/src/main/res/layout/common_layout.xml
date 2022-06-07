@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:paddingTop="?attr/actionBarSize"
+    android:layout_centerHorizontal="true"
+    android:background="@color/colorPrimary">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/instance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Packages"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:padding="10dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"/>
+
+                <LinearLayout
+                    android:id="@+id/selecteddatas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/yellow_button"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp"
+                    android:visibility="gone">
+
+                    <Button
+                        android:id="@+id/packageid"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:layout_weight="0.9"
+                        android:padding="5dp"
+                        android:textSize="16dp"
+                        android:text="Package Name"
+                        android:textColor="@color/colorWhite"></Button>
+
+                    <ImageView
+                        android:id="@+id/details"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.1"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/detailsicon"
+                        android:layout_gravity="center"
+                        android:paddingRight="10dp"
+                        android:textColor="@color/colorWhite"></ImageView>
+
+                </LinearLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/recylv">
+                    </androidx.recyclerview.widget.RecyclerView>
+
+
+                </ScrollView>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+        android:id="@+id/zerodata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="No data found"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="20dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorDefault"/>
+    </LinearLayout>
+
+</RelativeLayout>

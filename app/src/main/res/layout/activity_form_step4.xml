@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:paddingTop="?attr/actionBarSize">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginBottom="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:gravity="center"
+                android:text="Enter Your Name / Unique D &amp; SC Username"
+                android:textColor="@color/colorAccent"
+                android:textSize="25sp"
+                android:lineSpacingExtra="10sp"
+                android:padding="0dp"
+                android:layout_marginBottom="10dp"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:gravity="center"
+                android:text="Please enter your name or The DDC assigned ID from Headquarter"
+                android:textColor="@color/black_overlay"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"/>
+
+
+
+            <RelativeLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_marginTop="30dp">
+                <FrameLayout
+                    android:id="@+id/frameLayout"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+                    <EditText
+                        android:id="@+id/dscname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorAccent"
+                        android:cursorVisible="true"
+                        android:textCursorDrawable="@null"
+                        android:hint="Name or D &amp; SC Username"/>
+
+                    <ImageButton android:id="@+id/ib_speak"
+                        android:layout_gravity="right|top"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+
+                        android:layout_marginRight="30dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/voice"
+                        android:background="@android:color/transparent"/>
+                </FrameLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+        </ScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="bottom">
+
+            <Button
+                android:id="@+id/prevbtn"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_weight=".01"
+                android:background="@null"
+                android:paddingLeft="50dp"
+                android:padding="5dp"
+                android:drawableLeft="@drawable/prevbtn"
+                />
+
+
+            <Button
+                android:id="@+id/nextbtn"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:layout_weight=".01"
+                android:background="@null"
+                android:padding="5dp"
+                android:drawableRight="@drawable/nextbtn" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

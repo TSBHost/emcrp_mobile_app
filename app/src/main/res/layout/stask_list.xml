@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="3dp">
+
+    <LinearLayout
+        android:id="@+id/userdata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/yellow_button"
+        android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/packageid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_weight="0.9"
+        android:padding="5dp"
+        android:textSize="14dp"
+        android:text="Task Name"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"></Button>
+
+        <ImageView
+            android:id="@+id/details"
+            android:layout_width="0dp"
+            android:layout_weight="0.1"
+            android:layout_height="wrap_content"
+            android:src="@drawable/detailsicon"
+            android:layout_gravity="center"
+            android:paddingRight="10dp"
+            android:textColor="@color/colorWhite"></ImageView>
+
+    </LinearLayout>
+</LinearLayout>

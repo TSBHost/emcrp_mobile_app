@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:paddingTop="?android:attr/actionBarSize">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:gravity="center"
+                android:text="Select major - tasks or activities in progress"
+                android:textColor="@color/colorAccent"
+                android:textSize="25sp"
+                android:lineSpacingExtra="10sp"
+                android:padding="0dp"
+                android:layout_marginBottom="10dp"/>
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/orggroup">
+
+                    <!--<RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Site Handover to Contractor"
+                        android:textSize="20sp"
+                        android:paddingLeft="7sp"
+                        android:id="@+id/taskname"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Initial Work / Preworks"
+                        android:textSize="20sp"
+                        android:paddingLeft="7sp"
+                        android:id="@+id/org2"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sub Structure"
+                        android:textSize="20sp"
+                        android:paddingLeft="7sp"
+                        android:id="@+id/org3"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Super Structure Works - GF"
+                        android:textSize="20sp"
+                        android:paddingLeft="7sp"
+                        android:id="@+id/org4"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Super Structure Works - FF"
+                        android:textSize="20sp"
+                        android:paddingLeft="7sp"
+                        android:id="@+id/org5"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Super Structure Works - SF"
+                        android:textSize="20sp"
+                        android:paddingLeft="7sp"
+                        android:id="@+id/org6"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Super Structure Works - Roof"
+                        android:textSize="20sp"
+                        android:paddingLeft="7sp"
+                        android:id="@+id/org7"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Concrete Works Others"
+                        android:textSize="20sp"
+                        android:paddingLeft="7sp"
+                        android:id="@+id/org8"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Finishing Works"
+                        android:textSize="20sp"
+                        android:gravity="left"
+                        android:paddingLeft="7sp"
+                        android:id="@+id/org9"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Electrical Works"
+                        android:textSize="20sp"
+                        android:paddingLeft="7sp"
+                        android:id="@+id/org10"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Plumbing Works"
+                        android:textSize="20sp"
+                        android:paddingLeft="7sp"
+                        android:id="@+id/org11"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Furniture Works"
+                        android:textSize="20sp"
+                        android:paddingLeft="7sp"
+                        android:id="@+id/org12"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Road Works"
+                        android:textSize="20sp"
+                        android:paddingLeft="7sp"
+                        android:id="@+id/org13"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lab Test - Building Works"
+                        android:textSize="20sp"
+                        android:paddingLeft="7sp"
+                        android:id="@+id/org14"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lab Test - Road Works"
+                        android:textSize="20sp"
+                        android:paddingLeft="7sp"
+                        android:id="@+id/org15"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MDSP Trainings"
+                        android:textSize="20sp"
+                        android:paddingLeft="7sp"
+                        android:id="@+id/org16"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="General Meetings"
+                        android:textSize="20sp"
+                        android:paddingLeft="7sp"
+                        android:id="@+id/org17"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Social Works"
+                        android:textSize="20sp"
+                        android:paddingLeft="7sp"
+                        android:id="@+id/org18"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Environmental Works"
+                        android:textSize="20sp"
+                        android:paddingLeft="7sp"
+                        android:id="@+id/org19"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rehabilation Works"
+                        android:textSize="20sp"
+                        android:paddingLeft="7sp"
+                        android:id="@+id/org20"/>
+
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No Work at Site"
+                        android:textSize="20sp"
+                        android:paddingLeft="7sp"
+                        android:id="@+id/org21"/>-->
+
+                </RadioGroup>
+
+            </ScrollView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="bottom">
+
+            <Button
+                android:id="@+id/prevbtn"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_weight=".01"
+                android:background="@null"
+                android:paddingLeft="50dp"
+                android:padding="5dp"
+                android:drawableLeft="@drawable/prevbtn"
+                />
+
+
+            <Button
+                android:id="@+id/nextbtn"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:layout_weight=".01"
+                android:background="@null"
+                android:padding="5dp"
+                android:drawableRight="@drawable/nextbtn" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

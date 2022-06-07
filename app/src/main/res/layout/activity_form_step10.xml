@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:paddingTop="?attr/actionBarSize" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginBottom="20dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+               <!-- <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:gravity="left"
+                    android:layout_weight="1"
+                    android:text="Please Select Pictures"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:padding="0dp"
+                    android:layout_marginBottom="10dp"/>-->
+
+                <ToggleButton
+                    android:layout_width="match_parent"
+                    android:id="@+id/addimg"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colorDefault"
+                    android:textSize="20sp"
+                    android:textAllCaps="false"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:background="@drawable/box_shadow"
+                    android:textOff="+ Add Images"
+                    android:textOn="- Hide" />
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/image1area"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                     <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Photo 1"
+                        android:layout_gravity="left"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:padding="5dp"/>
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/imageView1" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <ImageButton
+                            android:id="@+id/takephoto1"
+                            android:layout_below="@+id/imageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Take a Picture"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="5dp"
+                            android:gravity="left"
+                            android:src="@drawable/cemera"
+                            android:textColor="@color/colorWhite"
+                            android:background="@android:color/transparent"/>
+                        <ImageButton
+                            android:id="@+id/img1gallery1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Choose a File"
+                            android:src="@drawable/gallery"
+                            android:layout_gravity="left"
+                            android:textSize="15sp"
+                            android:gravity="left"
+                            android:textColor="@color/colorWhite"
+                            android:background="@android:color/transparent"/>
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:id="@+id/caption1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:inputType="textImeMultiLine"
+                            android:hint="Caption 1"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <ToggleButton
+                            android:layout_width="match_parent"
+                            android:id="@+id/addimg1"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="@color/colorDefault"
+                            android:textSize="20sp"
+                            android:textAllCaps="false"
+                            android:padding="5dp"
+                            android:gravity="center"
+                            android:background="@drawable/box_shadow"
+                            android:textOff="+ Add Images"
+                            android:textOn="- Hide" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/image2area"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Photo 2"
+                            android:layout_gravity="left"
+                            android:layout_weight="1"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:padding="5dp"/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView2"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <ImageButton
+                            android:id="@+id/takephoto2"
+                            android:layout_below="@+id/imageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Take a Picture"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="5dp"
+                            android:gravity="left"
+                            android:src="@drawable/cemera"
+                            android:textColor="@color/colorWhite"
+                            android:background="@android:color/transparent"/>
+                        <ImageButton
+                            android:id="@+id/img1gallery2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Choose a File"
+                            android:src="@drawable/gallery"
+                            android:layout_gravity="left"
+                            android:textSize="15sp"
+                            android:gravity="left"
+                            android:textColor="@color/colorWhite"
+                            android:background="@android:color/transparent"/>
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/caption2"
+                            android:layout_marginLeft="5dp"
+                            android:inputType="textImeMultiLine"
+                            android:hint="Caption 2"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <ToggleButton
+                            android:layout_width="match_parent"
+                            android:id="@+id/addimg2"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="@color/colorDefault"
+                            android:textSize="20sp"
+                            android:textAllCaps="false"
+                            android:padding="5dp"
+                            android:gravity="center"
+                            android:background="@drawable/box_shadow"
+                            android:textOff="+ Add Images"
+                            android:textOn="- Hide" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/image3area"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Photo 3"
+                            android:layout_gravity="left"
+                            android:layout_weight="1"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:padding="5dp"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView3"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <ImageButton
+                            android:id="@+id/takephoto3"
+                            android:layout_below="@+id/imageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Take a Picture"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="5dp"
+                            android:gravity="left"
+                            android:src="@drawable/cemera"
+                            android:textColor="@color/colorWhite"
+                            android:background="@android:color/transparent"/>
+                        <ImageButton
+                            android:id="@+id/img1gallery3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Choose a File"
+                            android:src="@drawable/gallery"
+                            android:layout_gravity="left"
+                            android:textSize="15sp"
+                            android:gravity="left"
+                            android:textColor="@color/colorWhite"
+                            android:background="@android:color/transparent"/>
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:id="@+id/caption3"
+                            android:inputType="textImeMultiLine"
+                            android:hint="Caption 3"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <ToggleButton
+                            android:layout_width="match_parent"
+                            android:id="@+id/addimg3"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="@color/colorDefault"
+                            android:textSize="20sp"
+                            android:textAllCaps="false"
+                            android:padding="5dp"
+                            android:gravity="center"
+                            android:background="@drawable/box_shadow"
+                            android:textOff="+ Add Images"
+                            android:textOn="- Hide" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/image4area"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Photo 4"
+                            android:layout_gravity="left"
+                            android:layout_weight="1"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:padding="5dp"/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView4"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <ImageButton
+                            android:id="@+id/takephoto4"
+                            android:layout_below="@+id/imageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Take a Picture"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="5dp"
+                            android:gravity="left"
+                            android:src="@drawable/cemera"
+                            android:textColor="@color/colorWhite"
+                            android:background="@android:color/transparent"/>
+                        <ImageButton
+                            android:id="@+id/img1gallery4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Choose a File"
+                            android:src="@drawable/gallery"
+                            android:layout_gravity="left"
+                            android:textSize="15sp"
+                            android:gravity="left"
+                            android:textColor="@color/colorWhite"
+                            android:background="@android:color/transparent"/>
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:id="@+id/caption4"
+                            android:inputType="textImeMultiLine"
+                            android:hint="Caption 4"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <ToggleButton
+                            android:layout_width="match_parent"
+                            android:id="@+id/addimg4"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="@color/colorDefault"
+                            android:textSize="20sp"
+                            android:textAllCaps="false"
+                            android:padding="5dp"
+                            android:gravity="center"
+                            android:background="@drawable/box_shadow"
+                            android:textOff="+ Add Images"
+                            android:textOn="- Hide" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/image5area"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Photo 5"
+                            android:layout_gravity="left"
+                            android:layout_weight="1"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:padding="5dp"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView5"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <ImageButton
+                            android:id="@+id/takephoto5"
+                            android:layout_below="@+id/imageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Take a Picture"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="5dp"
+                            android:gravity="left"
+                            android:src="@drawable/cemera"
+                            android:textColor="@color/colorWhite"
+                            android:background="@android:color/transparent"/>
+                        <ImageButton
+                            android:id="@+id/img1gallery5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Choose a File"
+                            android:src="@drawable/gallery"
+                            android:layout_gravity="left"
+                            android:textSize="15sp"
+                            android:gravity="left"
+                            android:textColor="@color/colorWhite"
+                            android:background="@android:color/transparent"/>
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:id="@+id/caption5"
+                            android:inputType="textImeMultiLine"
+                            android:hint="Caption 5"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:gravity="bottom">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Previous"
+            android:id="@+id/prevbtn"
+            android:layout_weight="0.5"
+            android:padding="5dp"
+            android:background="@color/colorPrev"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"/>
+        <Button
+            android:id="@+id/sendbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save to Storage >>"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:textAllCaps="false"
+            android:paddingRight="15dp"
+            android:textSize="18sp"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/gradient_bg"/>
+
+
+    </LinearLayout>
+-->
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="bottom">
+
+            <Button
+                android:id="@+id/prevbtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_weight="0.5"
+                android:background="@null"
+                android:paddingLeft="50dp"
+                android:padding="5dp"
+                android:drawableLeft="@drawable/prevbtn"
+                />
+
+
+            <Button
+                android:id="@+id/sendbtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:layout_weight="0.5"
+                android:textColor="@color/colorPrimary"
+                android:text="Save to Storage"
+                android:textAllCaps="false"
+                android:background="@drawable/box_shadow"
+                android:textSize="18sp"
+                android:padding="5dp"
+                android:drawableLeft="@drawable/savebtn" />
+
+        </LinearLayout>-->
+
+    </LinearLayout>
+</RelativeLayout>

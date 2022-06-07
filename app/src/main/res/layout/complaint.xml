@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="?attr/actionBarSize">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:layout_gravity="top"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="left"
+            android:layout_margin="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="left">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Complaint"
+                    android:textSize="25dp"
+                    android:textColor="@color/colorDefault"
+                    android:textStyle="bold"
+                    android:padding="5dp"
+                    android:layout_marginBottom="15dp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:hint="Your Name"
+                    android:textColorHint="#999"
+                    android:id="@+id/userName"
+                    android:padding="8dp"
+                    android:background="@drawable/inpur_edit"
+                    android:layout_marginBottom="5dp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="Mobile No."
+                    android:textColorHint="#999"
+                    android:id="@+id/mobileno"
+                    android:padding="8dp"
+                    android:background="@drawable/inpur_edit"
+                    android:layout_marginBottom="5dp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:hint="Email Address"
+                    android:textColorHint="#999"
+                    android:id="@+id/femail"
+                    android:padding="8dp"
+                    android:background="@drawable/inpur_edit"
+                    android:layout_marginBottom="5dp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text|textMultiLine"
+                    android:gravity="top"
+                    android:hint="Complaint"
+                    android:textColorHint="#999"
+                    android:minLines="5"
+                    android:id="@+id/complaint"
+                    android:padding="8dp"
+                    android:background="@drawable/inpur_edit"
+                    android:layout_marginBottom="5dp"/>
+
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:id="@+id/registerBtn"
+                android:layout_gravity="center"
+                android:background="@color/colorDefault"
+                android:layout_marginTop="8dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:textSize="18dp"
+                android:textColor="#fff"
+                android:gravity="center"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

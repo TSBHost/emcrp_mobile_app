@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:paddingTop="?attr/actionBarSize" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:gravity="left"
+                android:text="New machinery at construction site for contractor?"
+                android:textColor="@color/colorAccent"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:padding="0dp"
+                android:layout_marginBottom="10dp"/>
+
+            <RadioGroup
+                android:id="@+id/machinary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:textSize="20sp"
+                    android:paddingLeft="7sp"
+                    android:id="@+id/org1"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:textSize="20sp"
+                    android:paddingLeft="7sp"
+                    android:id="@+id/org2"/>
+
+
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/listlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <include layout="@layout/machinary_list">
+                </include>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="bottom">
+
+            <Button
+                android:id="@+id/prevbtn"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_weight=".01"
+                android:background="@null"
+                android:paddingLeft="50dp"
+                android:padding="5dp"
+                android:drawableLeft="@drawable/prevbtn"
+                />
+
+
+            <Button
+                android:id="@+id/nextbtn"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:layout_weight=".01"
+                android:background="@null"
+                android:padding="5dp"
+                android:drawableRight="@drawable/nextbtn" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

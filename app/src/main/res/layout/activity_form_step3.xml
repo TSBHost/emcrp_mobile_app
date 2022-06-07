@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:paddingTop="?attr/actionBarSize">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+           <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:gravity="center"
+                android:text="Select Your Organization"
+                android:textColor="@color/colorAccent"
+                android:textSize="25sp"
+                android:lineSpacingExtra="10sp"
+                android:padding="0dp"
+                android:layout_marginBottom="10dp"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/orggroup">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LGED"
+                    android:textSize="20sp"
+                    android:paddingLeft="7sp"
+                    android:id="@+id/org1"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="D&amp;SC"
+                    android:textSize="20sp"
+                    android:paddingLeft="7sp"
+                    android:id="@+id/org2"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="World Bank"
+                    android:textSize="20sp"
+                    android:paddingLeft="7sp"
+                    android:id="@+id/org3"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="School Management Committe"
+                    android:textSize="20sp"
+                    android:paddingLeft="7sp"
+                    android:id="@+id/org4"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Monitoring and Evaluation"
+                    android:textSize="20sp"
+                    android:paddingLeft="7sp"
+                    android:id="@+id/org5"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contractor"
+                    android:textSize="20sp"
+                    android:paddingLeft="7sp"
+                    android:id="@+id/org6"/>
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="bottom">
+
+            <Button
+                android:id="@+id/prevbtn"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_weight=".01"
+                android:background="@null"
+                android:paddingLeft="50dp"
+                android:padding="5dp"
+                android:drawableLeft="@drawable/prevbtn"
+                />
+
+
+            <Button
+                android:id="@+id/nextbtn"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:layout_weight=".01"
+                android:background="@null"
+                android:padding="5dp"
+                android:drawableRight="@drawable/nextbtn" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

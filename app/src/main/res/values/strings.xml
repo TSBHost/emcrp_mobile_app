@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EMCRP ICT Monitoring</string>
+    <string name="FCM_PREF">app.ddc.lged.emcrp.fcm_pref</string>
+    <string name="FCM_TOKEN">app.ddc.lged.emcrp.fcm_token</string>
+    <string name="channel_name">EMCRP</string>
+    <string name="channel_description">Emergency Multi-Sector Rohingya Crisis Response Project (EMCRP)</string>
+
+
+    <string name="version">Version 1.0.0</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Userid or Shelter Code</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">Incorrect Username or Password</string>
+    <string name="error_incorrect_pin">Incorrect Pin No</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    <string name="action_settings">Exit App</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_home">EMCRP Project</string>
+    <string name="title_clickHere">Click Here</string>
+    <string name="title_login">Login</string>
+    <string name="title_logNext">Click Login for Next Step</string>
+    <string name="title_exPin">Login with existing PIN ?</string>
+    <string name="title_user">User ID </string>
+    <string name="title_pass">Password</string>
+    <string name="title_lonline">EMCRP User Login</string>
+
+
+    <string name="deleteContact">Do you want to delete all data from your device ?\n\n(Shelters, Tasks, Submissions, Images)</string>
+    <string name="logutcont">Do you want to logout EMCRP from your device ?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <string name="title_spin">Set Pin</string>
+    <string name="title_pin">Pin</string>
+    <string name="title_cpin">Confirm Pin</string>
+    <string name="title_pAccessApp">Click Set PIN to set PIN to Access this application</string>
+    <string name="title_enterp">Enter Pin </string>
+    <string name="title_go">GO >> </string>
+    <string name="title_nUser">Login with New User ?</string>
+
+    <string name="login_un">login_un</string>
+    <string name="login_pw">login_pw</string>
+
+    <string name="show">Show</string>
+    <string name="hide">Hide</string>
+    <string name="empty">Empty</string>
+
+    <string name="dhaka_office">
+        Local Government Engineering Department (LGED)\n
+        Level-8, LGED Bhaban; Agargaon, Shere Bangla Nagar Dhaka-1207.\n
+        Bangladesh\n\n
+
+        +880 195 278 4067\n
+        complaints@EMCRPbd.org
+    </string>
+
+
+    <!-- ===================Organization and Designation ======================== -->
+    <string-array name="lged">
+        <item>Sub-Assistant Engineer - Upazila</item>
+        <item>Upazila Engineer - Upazila</item>
+        <item>Assistant Engineer - District</item>
+        <item>Senior Assistant Engineers - District</item>
+        <item> Executive Engineer - District</item>
+        <item> Superintending Engineer - Regional</item>
+        <item> Deputy Project Director - Headquarter</item>
+        <item> Project Director - Headquarter</item>
+        <item> Additional Chief Engineer - Headquarter</item>
+        <item> Chief Engineer - Headquarter</item>
+    </string-array>
+
+    <string-array name="dnsc">
+        <item>Site Supervisor - Field</item>
+        <item>Field Resident Engineer - District</item>
+        <item>Regional Resident Engineer - Regional</item>
+        <item> Engineer - Headquarter</item>
+        <item> Deputy Team Lead - Headquarter</item>
+        <item> Team Lead - Headquarter</item>
+    </string-array>
+
+    <string-array name="worldbank">
+        <item>World Bank Representative</item>
+    </string-array>
+
+    <string-array name="school_ms">
+        <item>School Management Committee Representative</item>
+    </string-array>
+
+    <string-array name="monitoring">
+        <item>Monitoring and Evaluation Consultants</item>
+    </string-array>
+
+    <string-array name="contractor">
+        <item>Engineer - Contractor</item>
+    </string-array>
+
+
+    <!-- ===================Major Tasks ======================== -->
+    <string-array name="handover_contractor">
+        <item>No obstacle - Work can start immediately</item>
+        <item>Minor obstacle - Provide details in comments</item>
+        <item>Major obstacle - Provide details in comments</item>
+    </string-array>
+    <string-array name="initial_work">
+        <item>Initial Work - Tubewell, Toilets, Signboard, Safety Signs, Fencing and Demolition</item>
+        <item>Initial Work - Site Development (Prework),  Protection work for School / Road (Palisading)</item>
+        <item>Initial Work - Labor Shed, Temporary School, Materials Shed and Site Office</item>
+        <item>Initial Work - Setting Out / Pile Layout</item>
+        <item>Other Works</item>
+    </string-array>
+    <string-array name="sub_structure">
+        <item>Piling Works - Boring and Casting</item>
+        <item>Earth excavation and Pile Head breaking</item>
+        <item>Pile Integrity and Load Tests</item>
+        <item>Shuttering, Laying Reinforcement - Pile Cap and Bracing Beam</item>
+        <item>Concrete Pouring  - Pile Cap and Bracing Beam</item>
+        <item>Curing Work (28 days) - Pile Cap and Bracing Beam</item>
+        <item>4 Tubewells boring</item>
+        <item>Rainwater Harvesting Tank - Underground</item>
+        <item>Curing Work (28 days) - Ground Water Tank</item>
+        <item>Shuttering, Laying Reinforcements - Pedestal Columns and Grade Beams</item>
+        <item>Concrete Pouring  - Pedestal Columns and Grade Beams</item>
+        <item>Curing Work (28 days) - Pedestal Columns and Grade Beams</item>
+        <item>Earth / Sand filling and Compaction</item>
+    </string-array>
+
+    <string-array name="super_structuregnd">
+        <item>Shuttering, Laying Reinforcements - GF Columns - 1st Lift, Stair and Ramp</item>
+        <item>Concrete Pouring  - GF Columns - 1st Lift, Stair and Ramp</item>
+        <item>Curing Work (28 days) - GF Columns - 1st Lift, Stair and Ramp</item>
+        <item>Shuttering, Laying Reinforcements - GF Columns -2nd Lift, Stair and Ramp</item>
+        <item>Concrete Pouring  - GF Columns -2nd Lift, Stair and Ramp</item>
+        <item>Curing Work (28 days) - GF Columns -2nd Lift, Stair and Ramp</item>
+        <item>Ground Floor Slab - BFS</item>
+        <item>Ground Floor Slab - Concreting</item>
+        <item>Curing Work (28 days) - Slab</item>
+    </string-array>
+
+
+    <string-array name="super_structure1st">
+        <item>Shuttering, Laying Reinforcements and electrical conduits  - 1st Floor Beams and Slab</item>
+        <item>Concrete Pouring  - 1st Floor Beams and Slab</item>
+        <item>Curing Work (28 days) - 1st Floor Beams and Slab</item>
+        <item>Shuttering, Laying Reinforcements  - 1st Floor Columns - 1st Lift and Stair</item>
+        <item>Concrete Pouring  - 1st Floor Columns - 1st Lift and Stair</item>
+        <item>Curing Work (28 days) - 1st Floor Columns - 1st Lift and Stair </item>
+        <item>Shuttering, Laying Reinforcements  - 1st Floor Columns - 2nd Lift and Stair</item>
+        <item>Concrete Pouring  - 1st Floor Columns - 2nd Lift and Stair</item>
+        <item>Curing Work (28 days) - 1st Floor Columns - 2nd Lift and Stair</item>
+    </string-array>
+
+    <string-array name="super_structure2nd">
+        <item>Shuttering, Laying Reinforcements and electrical conduits  - 2nd Floor Beams and Slab</item>
+        <item>Concrete Pouring  - 2nd Floor Beams and Slab</item>
+        <item>Curing Work (28 days) - 2nd Floor Beams and Slab</item>
+        <item>Shuttering, Laying Reinforcements  - 2nd Floor Columns - 1st Lift and Stair</item>
+        <item>Concrete Pouring  - 2nd Floor Columns - 1st Lift and Stair</item>
+        <item>Curing Work (28 days) - 2nd Floor Columns - 1st Lift and Stair</item>
+        <item>Shuttering, Laying Reinforcements  - 2nd Floor Columns - 2nd Lift and Stair</item>
+        <item>Concrete Pouring  - 2nd Floor Columns - 2nd Lift and Stair</item>
+        <item>Curing Work (28 days) - 2nd Floor Columns - 2nd Lift and Stair</item>
+    </string-array>
+
+    <string-array name="super_structureroof">
+        <item>Shuttering, Laying Reinforcements and electrical conduits - Roof Beams and Slab</item>
+        <item>Concrete Pouring  - Roof Beams and Slab</item>
+        <item>Curing Work (28 days) - Roof Floor Beams and Slab</item>
+        <item>Shuttering Stub Columns for extention</item>
+        <item>Concrete Pouring  - Stub Columns for Extention</item>
+        <item>Curing Work (28 days) - Roof Stub Columns</item>
+    </string-array>
+
+    <string-array name="concreate_work">
+        <item>Shuttering, Laying Reinforcements - Chilekotha and Rainwater Harvesting Tank</item>
+        <item>Concrete Pouring  - Chilekotha and Rainwater Harvesting Tank</item>
+        <item>Curing Work (28 days) - Chilekhota and Water Tank</item>
+        <item>Parapet Walls, Drop Wall, Sunshade, Lintel, Railings</item>
+        <item>Curing Work (28 days) - Parapet Walls, Drop Wall, Sunshade, Lintel, Railings</item>
+    </string-array>
+
+
+    <string-array name="fnishing_works">
+        <item>Brick Works</item>
+        <item>Windows  Grills</item>
+        <item>Plastering Works</item>
+        <item>Windows and Door - Frames</item>
+        <item>Thai Windows,  Doors,  MS Gates and Collapsible Gate</item>
+        <item>Patent Stones Ground Floor and 1st Floor</item>
+        <item>Toilets Plaster Water Proofing</item>
+        <item>Tiles - Toilet - Walls</item>
+        <item>Tiles - Toilet -Floor, Stair, 2nd Floor</item>
+        <item>Exterior Painting </item>
+        <item>Interior  Painting Works</item>
+        <item>All Finishing Tiles Doors and Windows</item>
+        <item>Landscaping Works</item>
+    </string-array>
+
+
+    <string-array name="electric_work">
+        <item>Electrical Fittings Approval</item>
+        <item>Electrical  Wiring Systems with Earth Protection System</item>
+        <item>Solar System Installation Works</item>
+        <item>Lights, Fans - Finishing Works</item>
+    </string-array>
+
+    <string-array name="plumbing_work">
+        <item>Plumbing Fittings Approval</item>
+        <item>Plumbing Works</item>
+        <item>Sanitary - Fixture Finishing Works</item>
+    </string-array>
+
+
+    <string-array name="furn_work">
+        <item>Funiture Supply Approval at Head Office</item>
+        <item>Funiture Supply Approval at Sites</item>
+    </string-array>
+    <string-array name="road_work">
+        <item>External Road Construction Works</item>
+        <item>Palisading Construction Works</item>
+        <item>Culvert Construction Works</item>
+        <item>Internal Road Works</item>
+    </string-array>
+
+
+    <string-array name="quality_assu_work">
+        <item>Mixed Design</item>
+        <item>Slump Test</item>
+        <item>Cylinder Test / Strength test for concrete - 28 days</item>
+        <item>Water - Salinity</item>
+        <item>Cylinder Test / Strength test for concrete - 7 days</item>
+        <item>Bricks: Field Test</item>
+        <item>Bricks: Lab Test</item>
+        <item>Coarse Aggregate</item>
+        <item>Fine Aggregate</item>
+        <item>Cement</item>
+        <item>Reinforcement</item>
+        <item>Bentonite</item>
+        <item>Slurry Test - Density, Viscocity, pH Tests</item>
+    </string-array>
+
+    <string-array name="lab_task_works">
+        <item>Mixed Design for Culvert Works</item>
+        <item>Slump Test</item>
+        <item>Cylinder Test 28 days</item>
+        <item>Cylinder Test 7 days</item>
+        <item>Road - Fill material - Atterberg limits, Plasticity, Optimum</item>
+        <item>Moisture Content</item>
+        <item>Road - Source Approval for Sand</item>
+        <item>Road - Source Approval for Stone Aggregate</item>
+        <item>Road - Source Approval for Brick</item>
+        <item>Road - Source Approval for Bitumen</item>
+        <item>Road - OnSite Testing of Sand</item>
+        <item>Road - OnSite Testing of Stone Aggregate</item>
+        <item>Road - OnSite Testing of Brick</item>
+        <item>Road - OnSite Testing of Bitumin</item>
+        <item>Road - Compaction Test for each layer</item>
+        <item>Road - Gradation testing for subbase, base</item>
+        <item>Road - CBR test for Sub Grade, ISG, Sub Base, Base</item>
+        <item>Road - Asphalts / Bitumen Workable Temperature Testing</item>
+    </string-array>
+
+    <string-array name="EMCRP_projects_rel">
+        <item>Construction Training - Structural, PIT, PLT and Quality Control, Finishing Works </item>
+        <item>ICT Training</item>
+        <item>Social Management Plan Implementation Training</item>
+        <item>Environmental Management Plan Implementation Training</item>
+        <item>EMCRP Operational / Awareness building Training</item>
+        <item>Motivational Training</item>
+        <item>Electrical Training</item>
+        <item>Plumbing Training</item>
+        <item>Community Management Committee Training</item>
+        <item>Other Training</item>
+    </string-array>
+
+    <string-array name="social_works">
+        <item>Social Management Plan Works</item>
+    </string-array>
+
+    <string-array name="env_works">
+        <item>Environmental Management Plan Works</item>
+    </string-array>
+
+    <string-array name="reh_works">
+        <item>Concrete Works</item>
+        <item>Electrical Works</item>
+        <item>Plumbing Works</item>
+        <item>Painting Works</item>
+        <item>Structural Works</item>
+    </string-array>
+
+    <string-array name="general_meeting">
+        <item>General meeting at HQ</item>
+        <item>General meeting at District</item>
+        <item>General meeting at Upazila</item>
+        <item>General meeting at Site</item>
+    </string-array>
+
+
+    <string-array name="no_work_at_site">
+        <item>Site Clearance Issues</item>
+        <item>Materials Issues</item>
+        <item>Machinery Issues</item>
+        <item>Labor shortage</item>
+        <item>Shuttering shortage</item>
+        <item>Timely  Approvals from PMU</item>
+        <item>Design Changes due to Field Condition</item>
+        <item>Availability of drawings</item>
+        <item>Force Majeure - Weather, Earth Quake, Cyclone, Flood, Fire etc.</item>
+        <item>Quality of Work / Poor Workmanship</item>
+        <item>Festival Vacation</item>
+        <item>Contractors Issue - (Cashflow, Mobilization, Skill)</item>
+        <item>Accident at site</item>
+        <item>Delay in selecting Piles for PLT</item>
+    </string-array>
+
+
+    <string-array name="manpower_yes">
+        <item>Engineer(s)</item>
+        <item>Supervisor(s)</item>
+        <item>Surveyor(s)</item>
+        <item>Foreman</item>
+        <item>Lab Technician</item>
+        <item>Concrete Mixer Machine Driver</item>
+        <item>Mason(s)</item>
+        <item>Rod Binding Labor(s)</item>
+        <item>Labor(s)</item>
+    </string-array>
+
+
+    <string-array name="machinery_yes">
+        <item>Bored Pile Equipment</item>
+        <item>Concrete Mixture Machine with Hopper</item>
+        <item>Concrete Vibrator(s)</item>
+        <item>Generator(s)</item>
+        <item>Electric Welding Set(s)</item>
+        <item>Bar Bending Machine(s)</item>
+        <item>Bar Cutting Machine(s)</item>
+        <item>Water Pump(s)</item>
+        <item>Soil Compactor(s)</item>
+        <item>Dual Drum Roller</item>
+        <item>Water Bowser (Trailer Type)</item>
+        <item>Pick Up Van</item>
+        <item>Motor Cycle(s)</item>
+    </string-array>
+
+    <string-array name="material_yes">
+        <item>Rods (Reinforcement as per grade) available</item>
+        <item>Cement (according to specification) bags available</item>
+        <item>Coarse Aggregate (Stone chips) (according to specification) available</item>
+        <item>Fine Aggregate (Sand) (according to specification) available</item>
+        <item>Bricks (according to specification) available</item>
+    </string-array>
+
+    <string name="title_activity_slash_screen">SlashScreen</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="hintscomments">
+        Comments: Whether the required documents have
+been submitted, date and time proposed by the
+contractor is permitted, or any other date and time
+offered (with reasons), and any other instructions:
+
+    </string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_resource">ResourceActivity</string>
+
+    <string name="material_prompt">Choose the material</string>
+
+    <string-array name="materials_arrays">
+        <item>Choose the material</item>
+        <item>Rods (Reinforcement as per grade)</item>
+        <item>Cement</item>
+        <item>Coarse Aggregate (Stone chips)</item>
+        <item>Fine Aggregate (Sand)</item>
+        <item>Bricks</item>
+    </string-array>
+</resources>

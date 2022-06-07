@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:paddingTop="?attr/actionBarSize">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/formarea">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent">
+                        <FrameLayout
+                            android:id="@+id/frameLayout"
+                            android:layout_alignParentLeft="false"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent">
+                            <EditText
+                                android:id="@+id/userfeedback"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:minHeight="200dp"
+                                android:hint="Write your Comments Here.."
+                                android:textCursorDrawable="@null"
+                                android:minLines="12"
+                                android:gravity="top"
+                                android:layout_gravity="top"
+                                android:inputType="textMultiLine"
+                                android:padding="5dp"
+                                android:background="@drawable/inpur_edit"
+                                android:textColor="@color/colorDefault"
+                                android:textSize="16sp"/>
+
+                            <ImageButton android:id="@+id/ib_speak"
+                                android:layout_gravity="right|top"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:layout_margin="10dp"
+                                android:src="@drawable/voice"
+                                android:background="@android:color/transparent"/>
+                        </FrameLayout>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp">
+
+                        <ImageButton
+                            android:id="@+id/takephoto1"
+                            android:layout_below="@+id/imageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Take a Picture"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="5dp"
+                            android:gravity="left"
+                            android:src="@drawable/cemera"
+                            android:textColor="@color/colorWhite"
+                            android:background="@android:color/transparent"/>
+                        <ImageButton
+                            android:id="@+id/img1gallery1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Choose a File"
+                            android:src="@drawable/gallery"
+                            android:layout_gravity="left"
+                            android:textSize="15sp"
+                            android:gravity="left"
+                            android:textColor="@color/colorWhite"
+                            android:background="@android:color/transparent"/>
+
+
+
+                        <!--<Button
+                            android:id="@+id/takephoto1"
+                            android:layout_below="@+id/imageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Take a Picture"
+                            android:layout_gravity="left"
+                            android:gravity="center"
+                            android:layout_marginRight="10dp"
+                            android:textSize="15sp"
+                            android:textAllCaps="false"
+                            android:layout_weight="0.5"
+                            android:textColor="@color/colorWhite"
+                            android:background="@color/colorDefault"/>
+                        <Button
+                            android:id="@+id/img1gallery1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Choose a File"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="right"
+                            android:textSize="15sp"
+                            android:textAllCaps="false"
+                            android:gravity="center"
+                            android:layout_weight="0.5"
+                            android:textColor="@color/colorWhite"
+                            android:background="@color/colorDeepOrange"/>-->
+                    </LinearLayout>
+                </LinearLayout>
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp">
+                    <Button
+                        android:id="@+id/feedbackbtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:text="Submit"
+                        android:background="@color/colorPrimaryDark"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="22sp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"/>
+
+
+                </LinearLayout>-->
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
