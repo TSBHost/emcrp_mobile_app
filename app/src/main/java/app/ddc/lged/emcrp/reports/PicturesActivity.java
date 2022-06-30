@@ -17,7 +17,10 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Environment;
+import android.os.PersistableBundle;
 import android.provider.MediaStore;
+
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
@@ -28,6 +31,7 @@ import androidx.core.content.FileProvider;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.telephony.TelephonyManager;
+import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -45,11 +49,13 @@ import android.widget.ToggleButton;
 
 import com.bumptech.glide.Glide;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.nio.ByteBuffer;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -71,13 +77,14 @@ public class PicturesActivity extends NavigationActivity implements View.OnClick
     View v;
     Button nextbtn, prevbtn;
     Context context;
-    Bitmap bitmap1, bitmap2, bitmap3, bitmap4, bitmap5;
+    static Bitmap bitmap1, bitmap2, bitmap3, bitmap4, bitmap5;
+    static String bitmap1path, bitmap2path, bitmap3path, bitmap4path, bitmap5path;
     ImageButton TakeP1, TakeP2, TakeP3, TakeP4, TakeP5, imgG1, imgG2, imgG3, imgG4, imgG5;
     TextView cap1, cap2, cap3, cap4, cap5;
     Button UploadImageToServer;
     ImageView imgv1, imgv2, imgv3, imgv4, imgv5;
     public static final int RequestPermissionCode = 1;
-    ToggleButton plusbtn, pbtn1, pbtn2, pbtn3, pbtn4;
+    ToggleButton pbtn1, pbtn2, pbtn3, pbtn4,pbtn5;
     LinearLayout img1area, img2area, img3area, img4area, img5area;
     Config conf = new Config();
     SharedPreferences sharedPref;
@@ -134,11 +141,11 @@ public class PicturesActivity extends NavigationActivity implements View.OnClick
             img4area = (LinearLayout) findViewById(R.id.image4area);
             img5area = (LinearLayout) findViewById(R.id.image5area);
 
-            plusbtn = (ToggleButton) findViewById(R.id.addimg);
-            pbtn1 = (ToggleButton) findViewById(R.id.addimg1);
-            pbtn2 = (ToggleButton) findViewById(R.id.addimg2);
-            pbtn3 = (ToggleButton) findViewById(R.id.addimg3);
-            pbtn4 = (ToggleButton) findViewById(R.id.addimg4);
+            pbtn1 = (ToggleButton) findViewById(R.id.addimg);
+            pbtn2 = (ToggleButton) findViewById(R.id.addimg1);
+            pbtn3 = (ToggleButton) findViewById(R.id.addimg2);
+            pbtn4 = (ToggleButton) findViewById(R.id.addimg3);
+            pbtn5 = (ToggleButton) findViewById(R.id.addimg4);
 
             cap1 = (TextView) findViewById(R.id.caption1);
             cap2 = (TextView) findViewById(R.id.caption2);
@@ -167,7 +174,7 @@ public class PicturesActivity extends NavigationActivity implements View.OnClick
             imgG3.setOnClickListener(this);
             imgG4.setOnClickListener(this);
             imgG5.setOnClickListener(this);
-            plusbtn.setOnClickListener(this);
+            pbtn5.setOnClickListener(this);
             pbtn1.setOnClickListener(this);
             pbtn2.setOnClickListener(this);
             pbtn3.setOnClickListener(this);
@@ -193,12 +200,84 @@ public class PicturesActivity extends NavigationActivity implements View.OnClick
                 img5area.setVisibility(View.VISIBLE);
             }
 
-            if (imgv1.getDrawable() != null) {
-                pbtn1.setVisibility(View.VISIBLE);
-            } else {
-                pbtn1.setVisibility(View.GONE);
+//            if (imgv1.getDrawable() != null) {
+//                pbtn1.setVisibility(View.VISIBLE);
+//            } else {
+//                pbtn1.setVisibility(View.GONE);
+//            }
+            imgflag1= savedInstanceState!=null?savedInstanceState.containsKey("imgflag1")?savedInstanceState.getBoolean("imgflag1"):false:false;
+            imgflag2= savedInstanceState!=null?savedInstanceState.containsKey("imgflag2")?savedInstanceState.getBoolean("imgflag2"):false:false;
+            imgflag3= savedInstanceState!=null?savedInstanceState.containsKey("imgflag3")?savedInstanceState.getBoolean("imgflag3"):false:false;
+            imgflag4= savedInstanceState!=null?savedInstanceState.containsKey("imgflag4")?savedInstanceState.getBoolean("imgflag4"):false:false;
+            imgflag5= savedInstanceState!=null?savedInstanceState.containsKey("imgflag5")?savedInstanceState.getBoolean("imgflag5"):false:false;
+            if(imgflag1==true)
+            {
+                String bytes1= savedInstanceState!=null?savedInstanceState.containsKey("bitmap1path")?savedInstanceState.getString("bitmap1path"):null:null;
+                if(bytes1!=null) {
+                    img1area.setVisibility(View.VISIBLE);
+                    try {
+                        bitmap1path=bytes1;
+                        bitmap1=handleSamplingAndRotationBitmap(getApplicationContext(),Uri.fromFile(new File(bytes1)));
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    imgv1.setImageBitmap(bitmap1);
+                }
             }
-
+            if(imgflag2==true)
+            {
+                String bytes2= savedInstanceState!=null?savedInstanceState.containsKey("bitmap2path")?savedInstanceState.getString("bitmap2path"):null:null;
+                if(bytes2!=null) {
+                    img2area.setVisibility(View.VISIBLE);
+                    try {
+                        bitmap2path=bytes2;
+                        bitmap2=handleSamplingAndRotationBitmap(getApplicationContext(),Uri.fromFile(new File(bytes2)));
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    imgv2.setImageBitmap(bitmap2);
+                }
+            }
+            if(imgflag3==true)
+            {
+                String bytes3= savedInstanceState!=null?savedInstanceState.containsKey("bitmap3path")?savedInstanceState.getString("bitmap3path"):null:null;
+                if(bytes3!=null) {
+                    img3area.setVisibility(View.VISIBLE);
+                    try {
+                        bitmap3path=bytes3;
+                        bitmap3=handleSamplingAndRotationBitmap(getApplicationContext(),Uri.fromFile(new File(bytes3)));
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    imgv3.setImageBitmap(bitmap3);
+                }
+            }if(imgflag4==true)
+            {
+                String bytes4= savedInstanceState!=null?savedInstanceState.containsKey("bitmap4path")?savedInstanceState.getString("bitmap4path"):null:null;
+                if(bytes4!=null) {
+                    img4area.setVisibility(View.VISIBLE);
+                    try {
+                        bitmap4path=bytes4;
+                        bitmap4=handleSamplingAndRotationBitmap(getApplicationContext(),Uri.fromFile(new File(bytes4)));
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    imgv4.setImageBitmap(bitmap4);
+                }
+            }if(imgflag5==true)
+            {
+                String bytes5= savedInstanceState!=null?savedInstanceState.containsKey("bitmap5path")?savedInstanceState.getString("bitmap5path"):null:null;
+                if(bytes5!=null) {
+                    img5area.setVisibility(View.VISIBLE);
+                    try {
+                        bitmap5path=bytes5;
+                        bitmap5=handleSamplingAndRotationBitmap(getApplicationContext(),Uri.fromFile(new File(bytes5)));
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    imgv5.setImageBitmap(bitmap5);
+                }
+            }
             //Toast.makeText(getApplicationContext(),imeiid(),Toast.LENGTH_LONG).show();
         } else {
             Intent i = new Intent(this.getBaseContext().getApplicationContext(), LoginActivity.class);
@@ -206,7 +285,31 @@ public class PicturesActivity extends NavigationActivity implements View.OnClick
         }
 
     }
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        if(imgflag1==true) {
+            outState.putBoolean("imgflag1", imgflag1);
+            outState.putString("bitmap1path", (bitmap1path));
 
+        }if(imgflag2==true) {
+            outState.putBoolean("imgflag2", imgflag2);
+            outState.putString("bitmap2path", (bitmap2path));
+
+        }if(imgflag3==true) {
+            outState.putBoolean("imgflag3", imgflag3);
+            outState.putString("bitmap3path", (bitmap3path));
+
+        }if(imgflag4==true) {
+            outState.putBoolean("imgflag4", imgflag4);
+            outState.putString("bitmap4path", (bitmap4path));
+
+        }if(imgflag5==true) {
+            outState.putBoolean("imgflag5", imgflag5);
+            outState.putString("bitmap5path", (bitmap5path));
+
+        }
+    }
 
     @Override
     public void onClick(View view) {
@@ -440,7 +543,7 @@ public class PicturesActivity extends NavigationActivity implements View.OnClick
         startActivityForResult(Intent.createChooser(intent, "Select Picture"), REQ_CODE);
     }
 
-    String mCurrentPhotoPath;
+    static String mCurrentPhotoPath;
 
     private File createImageFile() throws IOException {
         // Create an image file name
@@ -505,6 +608,7 @@ public class PicturesActivity extends NavigationActivity implements View.OnClick
 ////        bmOptions.inSampleSize = scaleFactor;
 //        bmOptions.inPurgeable = true;
         try {
+            bitmap1path=mCurrentPhotoPath;
             bitmap1=handleSamplingAndRotationBitmap(getApplicationContext(),Uri.fromFile(new File(mCurrentPhotoPath)));
         } catch (IOException e) {
             e.printStackTrace();
@@ -532,6 +636,7 @@ public class PicturesActivity extends NavigationActivity implements View.OnClick
 //
 //        bitmap2 = BitmapFactory.decodeFile(mCurrentPhotoPath, bmOptions);
         try {
+            bitmap2path=mCurrentPhotoPath;
             bitmap2=handleSamplingAndRotationBitmap(getApplicationContext(),Uri.fromFile(new File(mCurrentPhotoPath)));
         } catch (IOException e) {
             e.printStackTrace();
@@ -558,6 +663,7 @@ public class PicturesActivity extends NavigationActivity implements View.OnClick
 //
 //        bitmap3 = BitmapFactory.decodeFile(mCurrentPhotoPath, bmOptions);
         try {
+            bitmap3path=mCurrentPhotoPath;
             bitmap3=handleSamplingAndRotationBitmap(getApplicationContext(),Uri.fromFile(new File(mCurrentPhotoPath)));
         } catch (IOException e) {
             e.printStackTrace();
@@ -584,6 +690,7 @@ public class PicturesActivity extends NavigationActivity implements View.OnClick
 //
 //        bitmap4 = BitmapFactory.decodeFile(mCurrentPhotoPath, bmOptions);
         try {
+            bitmap4path=mCurrentPhotoPath;
             bitmap4=handleSamplingAndRotationBitmap(getApplicationContext(),Uri.fromFile(new File(mCurrentPhotoPath)));
         } catch (IOException e) {
             e.printStackTrace();
@@ -610,6 +717,7 @@ public class PicturesActivity extends NavigationActivity implements View.OnClick
 //
 //        bitmap5 = BitmapFactory.decodeFile(mCurrentPhotoPath, bmOptions);
         try {
+            bitmap5path=mCurrentPhotoPath;
             bitmap5=handleSamplingAndRotationBitmap(getApplicationContext(),Uri.fromFile(new File(mCurrentPhotoPath)));
         } catch (IOException e) {
             e.printStackTrace();
@@ -732,12 +840,14 @@ catch (Exception e)
 //            Glide.with(imgv1.getContext()).load(data.getData().toString()).asBitmap().into(imgv1);
             try {
                 bitmap1=handleSamplingAndRotationBitmap(getApplicationContext(),uri);
+                bitmap1path=uri.getPath();
             } catch (IOException e) {
                 e.printStackTrace();
             }
             imgv1.setImageBitmap(bitmap1);
-            imgv1.setVisibility(View.VISIBLE);
+            img1area.setVisibility(View.VISIBLE);
             pbtn1.setVisibility(View.VISIBLE);
+            cap1.requestFocus();
             imgflag1 = true;
         }
 
@@ -747,7 +857,9 @@ catch (Exception e)
             Rand1 = String.format("%04d", random.nextInt(10000));
             // cap1.setText(CaptureTime1);
             setCemeraPic1();
+            img1area.setVisibility(View.VISIBLE);
             pbtn1.setVisibility(View.VISIBLE);
+            cap1.requestFocus();
             imgflag1 = true;
         }
 
@@ -765,11 +877,14 @@ catch (Exception e)
             pbtn2.setVisibility(View.VISIBLE);
             try {
                 bitmap2=handleSamplingAndRotationBitmap(getApplicationContext(),uri);
+                bitmap2path=uri.getPath();
             } catch (IOException e) {
                 e.printStackTrace();
             }
             imgv2.setImageBitmap(bitmap2);
             imgv2.setVisibility(View.VISIBLE);
+            img2area.setVisibility(View.VISIBLE);
+            cap2.requestFocus();
             imgflag2 = true;
         }
 
@@ -778,7 +893,9 @@ catch (Exception e)
             Rand2 = String.format("%04d", random.nextInt(10000));
             // cap2.setText(CaptureTime2);
             setCemeraPic2();
+            img2area.setVisibility(View.VISIBLE);
             pbtn2.setVisibility(View.VISIBLE);
+            cap2.requestFocus();
             imgflag2 = true;
         }
 
@@ -795,12 +912,15 @@ catch (Exception e)
 //            Glide.with(imgv3.getContext()).load(data.getData().toString()).asBitmap().into(imgv3);
             try {
                 bitmap3=handleSamplingAndRotationBitmap(getApplicationContext(),uri);
+                bitmap3path=uri.getPath();
             } catch (IOException e) {
                 e.printStackTrace();
             }
             imgv3.setImageBitmap(bitmap3);
             imgv3.setVisibility(View.VISIBLE);
+            img3area.setVisibility(View.VISIBLE);
             pbtn3.setVisibility(View.VISIBLE);
+            cap3.requestFocus();
             imgflag3 = true;
         }
 
@@ -810,6 +930,8 @@ catch (Exception e)
             Rand3 = String.format("%04d", random.nextInt(10000));
             setCemeraPic3();
             pbtn3.setVisibility(View.VISIBLE);
+            img3area.setVisibility(View.VISIBLE);
+            cap3.requestFocus();
             imgflag3 = true;
         }
 
@@ -822,12 +944,15 @@ catch (Exception e)
 //            Glide.with(imgv4.getContext()).load(data.getData().toString()).asBitmap().into(imgv4);
             try {
                 bitmap4=handleSamplingAndRotationBitmap(getApplicationContext(),uri);
+                bitmap4path=uri.getPath();
             } catch (IOException e) {
                 e.printStackTrace();
             }
             imgv4.setImageBitmap(bitmap4);
             imgv4.setVisibility(View.VISIBLE);
+            img4area.setVisibility(View.VISIBLE);
             pbtn4.setVisibility(View.VISIBLE);
+            cap4.requestFocus();
             imgflag4 = true;
         }
 
@@ -838,6 +963,8 @@ catch (Exception e)
 
             setCemeraPic4();
             pbtn4.setVisibility(View.VISIBLE);
+            img4area.setVisibility(View.VISIBLE);
+            cap4.requestFocus();
             imgflag4 = true;
         }
 
@@ -850,11 +977,15 @@ catch (Exception e)
 
             try {
                 bitmap5=handleSamplingAndRotationBitmap(getApplicationContext(),uri);
+                bitmap5path=uri.getPath();
             } catch (IOException e) {
                 e.printStackTrace();
             }
             imgv5.setImageBitmap(bitmap5);
             imgv5.setVisibility(View.VISIBLE);
+            img5area.setVisibility(View.VISIBLE);
+            pbtn5.setVisibility(View.VISIBLE);
+            cap5.requestFocus();
             imgflag5 = true;
         }
 
@@ -863,6 +994,9 @@ catch (Exception e)
             CaptureTime5 = new SimpleDateFormat("yyyyMMddHHmmssSSS").format(c);
             Rand5 = String.format("%04d", random.nextInt(10000));
             setCemeraPic5();
+            pbtn5.setVisibility(View.VISIBLE);
+            cap5.requestFocus();
+            img5area.setVisibility(View.VISIBLE);
             imgflag5 = true;
         }
 
